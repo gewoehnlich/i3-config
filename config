@@ -46,6 +46,9 @@ exec --no-startup-id xset -dpms
 
 exec source /etc/locale.conf
 
+for_window [class="TelegramDesktop" title="Save Image"] floating enable
+for_window [class="TelegramDesktop" title="Save Video"] floating enable
+# for_window [class="TelegramDesktop" title="Media Viewer"] floating enable
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -58,7 +61,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec wezterm
 # i3-sensible-terminal
 
 # kill focused window
